@@ -52,7 +52,7 @@ function c710253.chfilter(c)
 	return c:IsType(TYPE_EQUIP) and c:IsDiscardable()
 end
 function c710253.chcost(e,tp,eg,ep,ev,re,r,rp,chk)
-	if chk==0 then return Duel.IsExistingMatchingCard(c710253.chfilter,tp,LOCATION_HAND,0,1,e:GetHandler()) end
+	if chk==0 then return Duel.IsExistingMatchingCard(c710253.chfilter,tp,LOCATION_HAND,0,1,nil) end
 	Duel.DiscardHand(tp,c710253.chfilter,1,1,REASON_COST+REASON_DISCARD)
 end
 function c710253.chtg(e,tp,eg,ep,ev,re,r,rp,chk)
